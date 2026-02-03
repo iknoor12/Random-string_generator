@@ -2,28 +2,28 @@ import { useState, useCallback, useEffect } from "react";
 
 function App() {
 
-  // const [randomString, setRandomString] = useState("0");
-  // const [length, setLength] = useState(0);
+  const [randomString, setRandomString] = useState("0");
+  const [length, setLength] = useState(0);
 
-  // const generateString = useCallback(() => {
+  const generateString = useCallback(() => {
 
-  //   const characters =
-  //     "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
+    const characters =
+      "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789";
 
-  //   let result = "";
+    let result = "";
 
-  //   for (let i = 0; i < length; i++) {
-  //     const randomIndex = Math.floor(Math.random() * characters.length);
-  //     result += characters[randomIndex];
-  //   }
+    for (let i = 0; i < length; i++) {
+      const randomIndex = Math.floor(Math.random() * characters.length);
+      result += characters[randomIndex];
+    }
 
-  //   setRandomString(result);
+    setRandomString(result);
 
-  // }, [length]); 
+  }, [length]); 
 
-  // useEffect(() => {
-  //   generateString();
-  // }, [generateString]);
+  useEffect(() => {
+    generateString();
+  }, [generateString]);
 
   return (
     <div className="min-h-screen bg-gray-100 flex items-center justify-center">
@@ -38,7 +38,7 @@ function App() {
           {randomString}
         </div>
 
-        {/* <input
+        <input
           type="number"
           value={length}
           min="4"
@@ -52,7 +52,7 @@ function App() {
           className="w-full bg-blue-400 text-white text-lg py-2 rounded hover:bg-blue-600 transition"
         >
           Generate New String
-        </button> */}
+        </button>
 
       </div>
 
